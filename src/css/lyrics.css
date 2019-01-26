@@ -1,0 +1,24 @@
+#lyrics {
+  padding: 15vmin 5vmin 0 5vh;
+  background: linear-gradient(to bottom, black, rgba(0,0,0,0)) 0 0/100% 20vmin no-repeat,
+  linear-gradient(to bottom, darkorange 2px, rgba(0,0,0,0) 2px) 0 -2px/2vmin 30px repeat-y,
+  linear-gradient(to bottom, darkorange 2px, rgba(0,0,0,0) 2px) 100% -2px/2vmin 30px repeat-y,
+  linear-gradient(to bottom, darkorange 2px, rgba(0,0,0,0) 2px) 100% -2px/1vmin 6px repeat-y,
+  linear-gradient(to bottom, darkorange 2px, rgba(0,0,0,0) 2px) 0 -2px/1vmin 6px repeat-y,
+  rgba(0, 0, 0, 0.85);
+  text-align: center;
+  line-height: 1.15;
+}
+
+#lyrics > h1 {
+  margin-bottom: 0.5em;
+  color: darkorange;
+  font-size: 7.5vh;
+}
+
+#lyrics > p {
+  display: inline-block;
+  text-align: start;
+  text-shadow: 1px 1px 0 blue;
+  font-size: 5vh;
+}

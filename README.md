@@ -1,2 +1,3 @@
 # Cruel-Angel-s-Thesis
-Fun project featuring a pure CSS single div Evangelion pixel art
+Go to https://jialiang.github.io/#evangelion for more info.
+

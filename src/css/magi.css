@@ -1,0 +1,150 @@
+#magi {
+  box-sizing: border-box;
+  padding: 5vh 2.5vmin;
+  width: 100%;
+  border-top: 2px solid darkcyan;
+  background: black;
+  text-transform: uppercase;
+}
+
+#magi > div {
+  position: relative;
+  margin: auto;
+  padding: 2.5vmin;
+  max-width: 90%;
+  width: 80vmin;
+  border: 4px double darkorange;
+  text-align: center;
+}
+
+.controls {
+  display: inline-block;
+  width: 25vmin;
+  color: darkorange;
+  font-size: 7.5vmin;
+}
+
+.controls.left {
+  margin-right: calc(100% - 51vmin);
+}
+
+.controls.left:before,
+.controls.left:after,
+.controls.right:before,
+.controls.right:after {
+  display: block;
+  height: 2px;
+  border: 1px solid darkcyan;
+  content: "";
+}
+
+.code,
+.berserk {
+  display: inline-block;
+  margin-top: 2.5vmin;
+  width: 25vmin;
+  font-size: 4vmin;
+  font-family: Roboto;
+}
+
+.code {
+  margin-right: calc(100% - 51vmin);
+  color: darkorange;
+}
+
+.berserk {
+  border: 1vmin double red;
+  background: black;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.berserk:hover {
+  border: 1vmin double red;
+  background: red;
+  color: black;
+}
+
+.console {
+  position: relative;
+  width: 20vmin;
+  height: 15vmin;
+  border: 2px solid darkorange;
+  background: #5893d5;
+  font-size: 4vmin;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.console:hover {
+  background: red;
+}
+
+.volume,
+.replay {
+  margin-top: -3.5vmin;
+}
+
+.volume:after,
+.replay:after {
+  position: absolute;
+  top: 0;
+  width: 25%;
+  height: calc(50% + 2px);
+  content: "";
+}
+
+.replay:after {
+  right: 0;
+  border-left: 2px solid darkorange;
+  background: linear-gradient(to top, darkorange 0.5vmin, rgba(0, 0, 0, 0) 0) 0 0/4vmin 4vmin no-repeat, linear-gradient(270deg, rgba(0, 0, 0, 0) 25%, #000 0);
+  transform: rotateZ(-45deg);
+  transform-origin: top left;
+}
+
+.volume:after {
+  left: 0;
+  border-right: 2px solid darkorange;
+  background: linear-gradient(to bottom, darkorange 0.5vmin, rgba(0,0,0,0) 0) 0.8vmin 3.5vmin/5vmin 0.5vmin no-repeat, linear-gradient(90deg, rgba(0, 0, 0, 0) 25%, #000 0);
+  transform: rotateZ(45deg);
+  transform-origin: top right;
+}
+
+.play {
+  display: block;
+  margin: -8vmin auto 0 auto;
+  height: 17.5vmin;
+}
+
+.play:before,
+.play:after {
+  position: absolute;
+  bottom: -15%;
+  width: 25%;
+  height: 50%;
+  background: black;
+  content: "";
+}
+
+.play:before {
+  left: calc(-25% - 2px);
+  border-right: 2px solid orange;
+  transform: rotateZ(-45deg);
+  transform-origin: top right;
+}
+
+.play:after {
+  right: calc(-25% - 2px);
+  border-left: 2px solid orange;
+  transform: rotateZ(45deg);
+  transform-origin: top left;
+}
+
+.link {
+  display: inline-block;
+  margin: 0 -0.5vmin;
+  width: 15vmin;
+  height: 0.5vmin;
+  background: darkorange;
+}
