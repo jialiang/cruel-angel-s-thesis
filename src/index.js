@@ -12,7 +12,7 @@ var berserk = document.querySelector(".berserk");
 
 var cover = document.getElementById("cover");
 
-cover.style.opacity = "1";
+cover.style.animation = "none";
 cover.style.pointerEvents = "auto";
 video.volume = 0.75;
 
@@ -30,8 +30,8 @@ replay.onclick = function() {
 };
 
 volume.onclick = function() {
-  video.volume = video.volume ? 0 : 0.75;
-  this.innerHTML = "Volume:<br />" + (video.volume ? "ON" : "OFF");
+  video.muted = !video.muted;
+  this.innerHTML = "Volume:<br />" + (video.muted ? "OFF" : "ON");
 };
 
 berserk.onclick = function() {
@@ -39,10 +39,13 @@ berserk.onclick = function() {
 };
 
 window.sound = function(v) {
+  volume.innerHTML = "Volume:<br />" + (v ? "ON" : "OFF");
   video.muted = !v;
   video.onplay = null;
   video.play();
-  cover.style.opacity = "";
+  cover.style.transition = "1s opacity";
+  cover.style.webkitTransition = "1s opacity";
+  cover.style.opacity = "0";
   cover.style.pointerEvents = "";
 };
 

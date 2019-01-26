@@ -8,9 +8,17 @@
   height: 100%;
   background: black;
   text-align: center;
-  opacity: 0;
-  transition: 1s opacity;
   pointer-events: none;
+  animation: 0.15s fade-out 0.25s;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 #cover > h1 {

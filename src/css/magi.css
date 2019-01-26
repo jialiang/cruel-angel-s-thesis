@@ -70,35 +70,41 @@
   position: relative;
   width: 20vmin;
   height: 15vmin;
-  border: 2px solid darkorange;
-  background: #5893d5;
+  border: 2px solid black;
+  background: linear-gradient(to bottom, darkorange 2px, rgba(0, 0, 0, 0) 0),
+  linear-gradient(to top, darkorange 2px, rgba(0, 0, 0, 0) 0),
+  linear-gradient(to left, darkorange 2px, rgba(0, 0, 0, 0) 0),
+  linear-gradient(to right, darkorange 2px, rgba(0, 0, 0, 0) 0);
+  background-color: #5893d5;
   font-size: 4vmin;
   font-family: inherit;
   cursor: pointer;
 }
 
 .console:hover {
-  background: red;
+  background-color: red;
 }
 
 .volume,
 .replay {
   margin-top: -3.5vmin;
+  vertical-align: middle;
 }
 
 .volume:after,
 .replay:after {
   position: absolute;
-  top: 0;
+  top: 2px;
   width: 25%;
-  height: calc(50% + 2px);
+  height: 50%;
   content: "";
 }
 
 .replay:after {
   right: 0;
   border-left: 2px solid darkorange;
-  background: linear-gradient(to top, darkorange 0.5vmin, rgba(0, 0, 0, 0) 0) 0 0/4vmin 4vmin no-repeat, linear-gradient(270deg, rgba(0, 0, 0, 0) 25%, #000 0);
+  background: linear-gradient(to top, darkorange 0.5vmin, rgba(0, 0, 0, 0) 0) 0 0/4vmin 4vmin no-repeat,
+  linear-gradient(270deg, rgba(0, 0, 0, 0) 25%, #000 0);
   transform: rotateZ(-45deg);
   transform-origin: top left;
 }
@@ -106,7 +112,8 @@
 .volume:after {
   left: 0;
   border-right: 2px solid darkorange;
-  background: linear-gradient(to bottom, darkorange 0.5vmin, rgba(0,0,0,0) 0) 0.8vmin 3.5vmin/5vmin 0.5vmin no-repeat, linear-gradient(90deg, rgba(0, 0, 0, 0) 25%, #000 0);
+  background: linear-gradient(to bottom, darkorange 0.5vmin, rgba(0, 0, 0, 0) 0) 0.8vmin 3.5vmin/5vmin 0.5vmin no-repeat,
+  linear-gradient(90deg, rgba(0, 0, 0, 0) 25%, #000 0);
   transform: rotateZ(45deg);
   transform-origin: top right;
 }
@@ -120,25 +127,25 @@
 .play:before,
 .play:after {
   position: absolute;
-  bottom: -15%;
+  bottom: -34%;
   width: 25%;
-  height: 50%;
+  height: calc(50% - 4px);
   background: black;
   content: "";
 }
 
 .play:before {
-  left: calc(-25% - 2px);
+  left: -18%;
   border-right: 2px solid orange;
   transform: rotateZ(-45deg);
-  transform-origin: top right;
+  transform-origin: top left;
 }
 
 .play:after {
-  right: calc(-25% - 2px);
+  right: -18%;
   border-left: 2px solid orange;
   transform: rotateZ(45deg);
-  transform-origin: top left;
+  transform-origin: top right;
 }
 
 .link {
@@ -147,4 +154,5 @@
   width: 15vmin;
   height: 0.5vmin;
   background: darkorange;
+  vertical-align: middle;
 }
